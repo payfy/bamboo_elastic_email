@@ -31,7 +31,7 @@ defmodule Bamboo.ElasticEmailAdapter do
 
   @base_uri "https://api.elasticemail.com/v2"
   @send_message_path "/email/send"
-  @hackney_opts [:with_body, ssl_options: [versions: [:"tlsv1.2"]]]
+  @hackney_opts [:with_body, ssl_options: [verify: :verify_none]]
 
   alias Bamboo.{
     Email,
